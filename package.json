@@ -1,0 +1,24 @@
+{
+  "name": "aka-ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miguelslo27/AKA-Micro-Servicios.git"
+  },
+  "author": "Miguel Sosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miguelslo27/AKA-Micro-Servicios/issues"
+  },
+  "homepage": "https://github.com/Miguelslo27/AKA-Micro-Servicios#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "jsdom": "^13.0.0",
+    "micro": "^9.3.3"
+  }
+}
