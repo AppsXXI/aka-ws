@@ -1,10 +1,10 @@
 {
   "name": "aka-ws",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "micro -p 3000"
+    "start": "echo No start script found"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,5 @@
     "url": "https://github.com/Miguelslo27/AKA-Micro-Servicios/issues"
   },
   "homepage": "https://github.com/Miguelslo27/AKA-Micro-Servicios#readme",
-  "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
-    "jsdom": "^13.0.0",
-    "micro": "^9.3.3"
-  }
+  "dependencies": {}
 }
