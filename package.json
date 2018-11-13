@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo No start script found"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
     "url": "https://github.com/Miguelslo27/AKA-Micro-Servicios/issues"
   },
   "homepage": "https://github.com/Miguelslo27/AKA-Micro-Servicios#readme",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.6"
+  }
 }
