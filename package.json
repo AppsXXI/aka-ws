@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/Miguelslo27/AKA-Micro-Servicios#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.3.12",
     "nodemon": "^1.18.6"
   }
