@@ -5,6 +5,7 @@ const User = require("../user/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const config = require("../config");
+const verifyToken = require("./VerifyToken");
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
@@ -49,29 +50,17 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.post("/authenticate", (req, res) => {
-  const token = req.headers["x-access-token"];
-
-  if (!token) {
-    return res.status(401).send({ auth: false, message: "No token provided." });
-  }
-
-  jwt.verify(token, config.secret, (error, decoded) => {
+router.post("/authenticate", verifyToken, (req, res) => {
+  User.findById(req.userId, { password: 0 }, (error, user) => {
     if (error) {
-      return res.status(500).send({ auth: false, message: "Failed to authenticate token." });
+      return res.status(500).send("There was a problem finding the user.");
     }
 
-    User.findById(decoded.id, { password: 0 }, (error, user) => {
-      if (error) {
-        return res.status(500).send("There was a problem finding the user.");
-      }
+    if (!user) {
+      return res.status(404).send("No user found.");
+    }
 
-      if (!user) {
-        return res.status(404).send("No user found.");
-      }
-
-      res.status(200).send(user);
-    });
+    res.status(200).send(user);
   });
 });
 
